@@ -17,5 +17,116 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-Lexend-Deca);
+}
+.fancy-text {
+  font-family: var(--font-sail);
+}
+
+.underline-animation {
+  position: relative;
+}
+
+.underline-animation::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--primary);
+  transition: width 0.3s ease-in-out;
+}
+
+.underline-animation:hover::after {
+  width: 100%;
+}
+
+.underline-animation-white {
+  position: relative;
+}
+
+.underline-animation-white::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+.underline-animation-white:hover::after {
+  width: 100%;
+}
+
+/* Initial state of the dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  color: #4a4a4a;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: max-content;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+/* Show the dropdown when hovering over the parent element */
+.group:hover .dropdown-menu {
+  opacity: 1; /* Fade in */
+  transform: translateY(0px); /* Slide up into view */
+  pointer-events: auto; /* Enable interaction with the dropdown */
+}
+
+/* Hover effect for links */
+.dropdown-menu a {
+  padding: 8px 16px;
+  display: block;
+  text-decoration: none;
+  color: #4a4a4a;
+}
+
+.dropdown-menu a:hover {
+  color: white;
+}
+
+.fancy-button{
+  position: relative;
+}
+.fancy-button::before{
+  content: "";
+  position: absolute;
+  right: -10px;
+  bottom: -8px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid green;
+
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.floating {
+  animation: floatUpDown 2s infinite ease-in-out;
+  -webkit-animation: floatUpDown 2s infinite ease-in-out;
 }
