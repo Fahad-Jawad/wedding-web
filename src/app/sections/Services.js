@@ -1,24 +1,19 @@
 import Image from 'next/image';
 import React from 'react';
+import SectionDivider from '../components/SectionDivider';
 
 export default function Services() {
   return (
     <div className='flex flex-col p-4 md:p-8 lg:p-12 2xl:p-20 relative bg-pink-50'>
       <div className='flex justify-center gap-3 flex-col w-full text-center'>
-        <h2 className='fancy-text text-lg'>Our Services</h2>
-        <Image
-          src={'/images/divider2.png'}
-          alt='divider'
-          width={200}
-          height={100}
-          className='w-40 h-5 mx-auto'
-        />
+        <h2 className='fancy-text text-lg text-secondary'>Our Services</h2>
+        <SectionDivider className='mx-auto' />
         <h3 className='text-4xl font-bold'>Complete Wedding Planning</h3>
       </div>
 
       <div class='py-10 flex flex-wrap'>
-        <div class='w-1/3'>
-          <div className=' p-3 py-6 m-3 bg-white rounded-lg flex flex-col items-center gap-4 text-center'>
+        <div class='w-full md:w-1/2 lg:w-1/3'>
+          <div className=' p-3 py-6 my-4  lg:m-3 bg-white rounded-lg flex flex-col items-center gap-4 text-center'>
             <Image
               src={'/images/sideshapeleft.png'}
               alt='service 1'
@@ -34,8 +29,8 @@ export default function Services() {
             </p>
           </div>
         </div>
-        <div class='w-1/3'>
-          <div className=' p-3 py-6 m-3 bg-white rounded-lg flex flex-col items-center gap-4 text-center'>
+        <div class='w-full md:w-1/2 lg:w-1/3'>
+          <div className=' p-3 py-6 my-4  lg:m-3 bg-white rounded-lg flex flex-col items-center gap-4 text-center'>
             <Image
               src={'/images/sideshapeleft.png'}
               alt='service 1'
@@ -51,8 +46,8 @@ export default function Services() {
             </p>
           </div>
         </div>
-        <div class='w-1/3'>
-          <div className=' p-3 py-6 m-3 bg-white rounded-lg flex flex-col items-center gap-4 text-center'>
+        <div class='w-full md:w-1/2 lg:w-1/3'>
+          <div className=' p-3 py-6 my-4  lg:m-3 bg-white rounded-lg flex flex-col items-center gap-4 text-center'>
             <Image
               src={'/images/sideshapeleft.png'}
               alt='service 1'
@@ -68,8 +63,8 @@ export default function Services() {
             </p>
           </div>
         </div>
-        <div class='w-1/3'>
-          <div className=' p-3 py-6 m-3 bg-white rounded-lg flex flex-col items-center gap-4 text-center'>
+        <div class='w-full md:w-1/2 lg:w-1/3'>
+          <div className=' p-3 py-6 my-4  lg:m-3 bg-white rounded-lg flex flex-col items-center gap-4 text-center'>
             <Image
               src={'/images/sideshapeleft.png'}
               alt='service 1'
@@ -85,8 +80,8 @@ export default function Services() {
             </p>
           </div>
         </div>
-        <div class='w-1/3'>
-          <div className=' p-3 py-6 m-3 bg-white rounded-lg flex flex-col items-center gap-4 text-center'>
+        <div class='w-full md:w-1/2 lg:w-1/3'>
+          <div className=' p-3 py-6 my-4  lg:m-3 bg-white rounded-lg flex flex-col items-center gap-4 text-center'>
             <Image
               src={'/images/sideshapeleft.png'}
               alt='service 1'
@@ -102,8 +97,8 @@ export default function Services() {
             </p>
           </div>
         </div>
-        <div class='w-1/3'>
-          <div className=' p-3 py-6 m-3 bg-white rounded-lg flex flex-col items-center gap-4 text-center'>
+        <div class='w-full md:w-1/2 lg:w-1/3'>
+          <div className=' p-3 py-6 my-4  lg:m-3 bg-white rounded-lg flex flex-col items-center gap-4 text-center'>
             <Image
               src={'/images/sideshapeleft.png'}
               alt='service 1'

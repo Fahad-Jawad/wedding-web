@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import TopBar from '../sections/TopBar';
+import Button from './Button';
 
 export default function Navbar() {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -44,7 +45,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Nav */}
-          <div className='hidden lg:flex items-center space-x-8 text-base'>
+          <div className='hidden xl:flex items-center space-x-8 text-base'>
             <Link href='/' className=' py-3 underline-animation'>
               Home
             </Link>
@@ -57,7 +58,7 @@ export default function Navbar() {
             </Link>
             <div className='relative group menu'>
               <div className='flex items-center'>
-                <Link href='/about-us' className=' flex items-center py-3 '>
+                <Link href='/products' className=' flex items-center py-3 '>
                   Our Products
                   <span className='ml-2 transition-transform transform group-hover:rotate-180'>
                     <Image
@@ -205,8 +206,14 @@ export default function Navbar() {
             </Link>
           </div>
 
+          <div className='hidden xl:flex'>
+            <Link href='/contact-us'>
+              <Button text={'Book Now'} className='px-4 py-3' />
+            </Link>
+          </div>
+
           {/* Mobile Toggle Button */}
-          <div className='lg:hidden'>
+          <div className='xl:hidden'>
             <button onClick={toggleMobileNav}>
               <span className='text-2xl'>&#9776;</span>
             </button>
@@ -215,7 +222,7 @@ export default function Navbar() {
 
         {/* Mobile Drawer */}
         <div
-          className={`fixed inset-0 bg-white z-50 transform transition-transform duration-300 ${
+          className={`fixed inset-0 bg-white z-50 transform transition-transform duration-300 max-h-screen overflow-scroll ${
             isMobileNavOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
@@ -242,26 +249,33 @@ export default function Navbar() {
             >
               About Us
             </Link>
+            <Link
+              href='/about-us'
+              className='text-base font-medium border-b w-full text-start py-2'
+              onClick={closeMobileNav}
+            >
+              Our Services
+            </Link>
             <div className='w-full mobile-menu'>
-              {/* About Us Accordion */}
+              {/* Our Products Accordion */}
               <button
                 onClick={() => toggleAccordion(2)}
                 className='text-base font-medium w-full text-left py-3 border-b flex justify-between items-center'
               >
-                Our Services
+                Our Products
                 <Image
                   src='/images/icons/ArrowDown.svg'
                   alt='arrow'
                   width={13}
                   height={13}
                   className={`transform transition-transform ${
-                    activeAccordion === 1 ? 'rotate-180' : ''
+                    activeAccordion === 2 ? 'rotate-180' : ''
                   }`}
                 />
               </button>
               <div
                 className={`overflow-hidden transition-all duration-500 ${
-                  activeAccordion === 2 ? 'max-h-80' : 'max-h-0'
+                  activeAccordion === 2 ? 'max-h-screen' : 'max-h-0'
                 }`}
                 style={{
                   transitionProperty: 'max-height',
@@ -273,53 +287,153 @@ export default function Navbar() {
                     className='block px-4 py-3 '
                     onClick={closeMobileNav}
                   >
-                    Custom Cabinet Design
+                    Tents
                   </Link>
                   <Link
                     href='/services/cabinet-refinishing'
                     className='block px-4 py-3 '
                     onClick={closeMobileNav}
                   >
-                    Cabinet Refinishing
+                    Tables
                   </Link>
                   <Link
                     href='/services/installation-services'
                     className='block px-4 py-3 '
                     onClick={closeMobileNav}
                   >
-                    Installation Services
+                    Chairs
                   </Link>
                   <Link
                     href='/services/countertop-integration'
                     className='block px-4 py-3 '
                     onClick={closeMobileNav}
                   >
-                    Countertop Integration
+                    Table Settings
                   </Link>
                   <Link
                     href='/services/storage-optimization-solutions'
                     className='block px-4 py-3 '
                     onClick={closeMobileNav}
                   >
-                    Storage Optimization Solutions
+                    Decor
                   </Link>
                   <Link
                     href='/services/eco-friendly-cabinets'
                     className='block px-4 py-3 '
                     onClick={closeMobileNav}
                   >
-                    Eco-Friendly Cabinets
+                    Catering Services
+                  </Link>
+                  <Link
+                    href='/services/eco-friendly-cabinets'
+                    className='block px-4 py-3 '
+                    onClick={closeMobileNav}
+                  >
+                    Furniture
+                  </Link>
+                  <Link
+                    href='/services/eco-friendly-cabinets'
+                    className='block px-4 py-3 '
+                    onClick={closeMobileNav}
+                  >
+                    Linens
+                  </Link>
+                  <Link
+                    href='/services/eco-friendly-cabinets'
+                    className='block px-4 py-3 '
+                    onClick={closeMobileNav}
+                  >
+                    Event Equipment
+                  </Link>
+                  <Link
+                    href='/services/eco-friendly-cabinets'
+                    className='block px-4 py-3 '
+                    onClick={closeMobileNav}
+                  >
+                    Fresh Flowers
+                  </Link>
+                  <Link
+                    href='/services/eco-friendly-cabinets'
+                    className='block px-4 py-3 '
+                    onClick={closeMobileNav}
+                  >
+                    Cakes
                   </Link>
                 </div>
               </div>
             </div>
-            <Link
-              href='/products'
-              className='text-base font-medium border-b w-full text-start py-2'
-              onClick={closeMobileNav}
-            >
-              3D Laminate
-            </Link>
+
+            <div className='w-full mobile-menu'>
+              {/* Planning Accordion */}
+              <button
+                onClick={() => toggleAccordion(3)}
+                className='text-base font-medium w-full text-left py-3 border-b flex justify-between items-center'
+              >
+                Planning
+                <Image
+                  src='/images/icons/ArrowDown.svg'
+                  alt='arrow'
+                  width={13}
+                  height={13}
+                  className={`transform transition-transform ${
+                    activeAccordion === 3 ? 'rotate-180' : ''
+                  }`}
+                />
+              </button>
+              <div
+                className={`overflow-hidden transition-all duration-500 ${
+                  activeAccordion === 3 ? 'max-h-80' : 'max-h-0'
+                }`}
+                style={{
+                  transitionProperty: 'max-height',
+                }}
+              >
+                <div className='flex flex-col bg-primaryExtraLight text-base rounded-lg'>
+                  <Link
+                    href='/services/custom-cabinet-design'
+                    className='block px-4 py-3 '
+                    onClick={closeMobileNav}
+                  >
+                    Weddings
+                  </Link>
+                  <Link
+                    href='/services/cabinet-refinishing'
+                    className='block px-4 py-3 '
+                    onClick={closeMobileNav}
+                  >
+                    Corporate Events
+                  </Link>
+                  <Link
+                    href='/services/installation-services'
+                    className='block px-4 py-3 '
+                    onClick={closeMobileNav}
+                  >
+                    Birthdays
+                  </Link>
+                  <Link
+                    href='/services/countertop-integration'
+                    className='block px-4 py-3 '
+                    onClick={closeMobileNav}
+                  >
+                    Video & Photography
+                  </Link>
+                  <Link
+                    href='/services/storage-optimization-solutions'
+                    className='block px-4 py-3 '
+                    onClick={closeMobileNav}
+                  >
+                    Decor
+                  </Link>
+                  <Link
+                    href='/services/eco-friendly-cabinets'
+                    className='block px-4 py-3 '
+                    onClick={closeMobileNav}
+                  >
+                    Others
+                  </Link>
+                </div>
+              </div>
+            </div>
             <Link
               href='/projects'
               className='text-base font-medium border-b w-full text-start py-2'
@@ -328,18 +442,21 @@ export default function Navbar() {
               Projects
             </Link>
             <Link
-              href='/mission'
-              className='text-base font-medium border-b w-full text-start py-3'
-              onClick={closeMobileNav}
-            >
-              Mission
-            </Link>
-            <Link
               href='/contact-us'
               className='text-base font-medium border-b w-full text-start py-3'
               onClick={closeMobileNav}
             >
               Contact Us
+            </Link>
+            <Link
+              href='/contact-us'
+              className='w-full flex justify-center'
+              onClick={closeMobileNav}
+            >
+              <Button
+                className='p-3 !w-2/3 my-10 mx-auto !text-lg  bg-secondary text-white capitalize font-bold'
+                text={'Book Now'}
+              />
             </Link>
           </div>
 

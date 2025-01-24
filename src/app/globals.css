@@ -100,18 +100,17 @@ body {
   color: white;
 }
 
-.fancy-button{
+.fancy-button {
   position: relative;
 }
-.fancy-button::before{
-  content: "";
+.fancy-button::before {
+  content: '';
   position: absolute;
   right: -10px;
   bottom: -8px;
   width: 100%;
   height: 100%;
   border: 1px solid green;
-
 }
 
 @keyframes floatUpDown {
@@ -130,3 +129,52 @@ body {
   animation: floatUpDown 2s infinite ease-in-out;
   -webkit-animation: floatUpDown 2s infinite ease-in-out;
 }
+
+.attached-promo {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
+    url('/images/wedding-slide1.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-up {
+  animation: fadeUp 0.5s ease-out;
+  animation-fill-mode: both;
+}
+
+.breadcrumb {
+  background-image: linear-gradient(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.5)),
+    url(/images/testside.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 2s linear infinite;
+}
+
