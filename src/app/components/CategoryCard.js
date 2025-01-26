@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
 
-export default function CategoryCard({ name, image }) {
+export default function CategoryCard({ name, image ,onClick }) {
   return (
-    <div className="relative group mx-auto w-max border-2 border-primary rounded-full p-6 overflow-hidden">
+    <div className="cursor-pointer relative group mx-auto w-max border-2 border-primary rounded-full p-6 overflow-hidden" onClick={()=>{onClick(name)}} >
       {/* Image */}
       <Image
         src={image}

@@ -53,94 +53,12 @@ export default function Navbar() {
               About Us
             </Link>
 
-            <Link href='/about-us' className='py-3 underline-animation'>
+            <Link href='/services' className='py-3 underline-animation'>
               Our Services
             </Link>
-            <div className='relative group menu'>
-              <div className='flex items-center'>
-                <Link href='/products' className=' flex items-center py-3 '>
-                  Our Products
-                  <span className='ml-2 transition-transform transform group-hover:rotate-180'>
-                    <Image
-                      src='/images/icons/ArrowDownWhite.svg'
-                      alt='arrow img'
-                      width={13}
-                      height={13}
-                    />
-                  </span>
-                </Link>
-              </div>
-
-              {/* Dropdown Menu */}
-              <div className='dropdown-menu text-sm'>
-                <Link
-                  href='/services/custom-cabinet-design'
-                  className='block px-4 py-2 hover:bg-primaryLight capitalize rounded-t-md'
-                >
-                  tents
-                </Link>
-                <Link
-                  href='/services/cabinet-refinishing'
-                  className='block px-4 py-2 hover:bg-primaryLight capitalize border-y'
-                >
-                  tables
-                </Link>
-                <Link
-                  href='/services/installation-services'
-                  className='block px-4 py-2 hover:bg-primaryLight capitalize border-y'
-                >
-                  chairs
-                </Link>
-                <Link
-                  href='/services/countertop-integration'
-                  className='block px-4 py-2 hover:bg-primaryLight capitalize border-y'
-                >
-                  table settings
-                </Link>
-                <Link
-                  href='/services/storage-optimization-solutions'
-                  className='block px-4 py-2 hover:bg-primaryLight capitalize border-y'
-                >
-                  decor
-                </Link>
-                <Link
-                  href='/services/eco-friendly-cabinets'
-                  className='block px-4 py-2 hover:bg-primaryLight capitalize border-y'
-                >
-                  catering services
-                </Link>
-                <Link
-                  href='/services/eco-friendly-cabinets'
-                  className='block px-4 py-2 hover:bg-primaryLight capitalize border-y'
-                >
-                  furniture
-                </Link>
-                <Link
-                  href='/services/eco-friendly-cabinets'
-                  className='block px-4 py-2 hover:bg-primaryLight capitalize border-y'
-                >
-                  linens
-                </Link>
-                <Link
-                  href='/services/eco-friendly-cabinets'
-                  className='block px-4 py-2 hover:bg-primaryLight capitalize border-y'
-                >
-                  event equipments
-                </Link>
-                <Link
-                  href='/services/eco-friendly-cabinets'
-                  className='block px-4 py-2 hover:bg-primaryLight capitalize border-y'
-                >
-                  Fresh flowers
-                </Link>
-                <Link
-                  href='/services/eco-friendly-cabinets'
-                  className='block px-4 py-2 hover:bg-primaryLight capitalize rounded-b-md'
-                >
-                  Cakes
-                </Link>
-              </div>
-            </div>
+            <Link href='/products' className='py-3 underline-animation'>
+              Our Products
+            </Link>
             <div className='relative group menu'>
               <div className='flex items-center'>
                 <Link href='/about-us' className=' flex items-center py-3 '>
@@ -159,37 +77,37 @@ export default function Navbar() {
               {/* Dropdown Menu */}
               <div className='dropdown-menu text-sm'>
                 <Link
-                  href='/services/custom-cabinet-design'
+                  href='/planning/weddings'
                   className='block px-4 py-2 hover:bg-primaryLight capitalize rounded-t-md'
                 >
                   weddings
                 </Link>
                 <Link
-                  href='/services/cabinet-refinishing'
+                  href='/planning/corporate-events'
                   className='block px-4 py-2 hover:bg-primaryLight capitalize border-y'
                 >
-                  corportate events
+                  corporate events
                 </Link>
                 <Link
-                  href='/services/installation-services'
+                  href='/planning/birthdays'
                   className='block px-4 py-2 hover:bg-primaryLight capitalize border-y'
                 >
                   birthdays
                 </Link>
                 <Link
-                  href='/services/countertop-integration'
+                  href='/planning/video-&-photography'
                   className='block px-4 py-2 hover:bg-primaryLight capitalize border-y'
                 >
                   Video & photography
                 </Link>
                 <Link
-                  href='/services/storage-optimization-solutions'
+                  href='/planning/decor'
                   className='block px-4 py-2 hover:bg-primaryLight capitalize border-y'
                 >
                   decor
                 </Link>
                 <Link
-                  href='/services/eco-friendly-cabinets'
+                  href='/planning/others'
                   className='block px-4 py-2 hover:bg-primaryLight capitalize rounded-b-md'
                 >
                   others
@@ -204,13 +122,14 @@ export default function Navbar() {
             <Link href='/contact-us' className=' py-3 underline-animation'>
               Contact Us
             </Link>
-          </div>
-
-          <div className='hidden xl:flex'>
+            <div className='hidden xl:flex'>
             <Link href='/contact-us'>
               <Button text={'Book Now'} className='px-4 py-3' />
             </Link>
           </div>
+          </div>
+
+        
 
           {/* Mobile Toggle Button */}
           <div className='xl:hidden'>
@@ -250,124 +169,25 @@ export default function Navbar() {
               About Us
             </Link>
             <Link
-              href='/about-us'
+              href='/services'
               className='text-base font-medium border-b w-full text-start py-2'
               onClick={closeMobileNav}
             >
               Our Services
             </Link>
-            <div className='w-full mobile-menu'>
-              {/* Our Products Accordion */}
-              <button
-                onClick={() => toggleAccordion(2)}
-                className='text-base font-medium w-full text-left py-3 border-b flex justify-between items-center'
-              >
-                Our Products
-                <Image
-                  src='/images/icons/ArrowDown.svg'
-                  alt='arrow'
-                  width={13}
-                  height={13}
-                  className={`transform transition-transform ${
-                    activeAccordion === 2 ? 'rotate-180' : ''
-                  }`}
-                />
-              </button>
-              <div
-                className={`overflow-hidden transition-all duration-500 ${
-                  activeAccordion === 2 ? 'max-h-screen' : 'max-h-0'
-                }`}
-                style={{
-                  transitionProperty: 'max-height',
-                }}
-              >
-                <div className='flex flex-col bg-primaryExtraLight text-base rounded-lg'>
-                  <Link
-                    href='/services/custom-cabinet-design'
-                    className='block px-4 py-3 '
-                    onClick={closeMobileNav}
-                  >
-                    Tents
-                  </Link>
-                  <Link
-                    href='/services/cabinet-refinishing'
-                    className='block px-4 py-3 '
-                    onClick={closeMobileNav}
-                  >
-                    Tables
-                  </Link>
-                  <Link
-                    href='/services/installation-services'
-                    className='block px-4 py-3 '
-                    onClick={closeMobileNav}
-                  >
-                    Chairs
-                  </Link>
-                  <Link
-                    href='/services/countertop-integration'
-                    className='block px-4 py-3 '
-                    onClick={closeMobileNav}
-                  >
-                    Table Settings
-                  </Link>
-                  <Link
-                    href='/services/storage-optimization-solutions'
-                    className='block px-4 py-3 '
-                    onClick={closeMobileNav}
-                  >
-                    Decor
-                  </Link>
-                  <Link
-                    href='/services/eco-friendly-cabinets'
-                    className='block px-4 py-3 '
-                    onClick={closeMobileNav}
-                  >
-                    Catering Services
-                  </Link>
-                  <Link
-                    href='/services/eco-friendly-cabinets'
-                    className='block px-4 py-3 '
-                    onClick={closeMobileNav}
-                  >
-                    Furniture
-                  </Link>
-                  <Link
-                    href='/services/eco-friendly-cabinets'
-                    className='block px-4 py-3 '
-                    onClick={closeMobileNav}
-                  >
-                    Linens
-                  </Link>
-                  <Link
-                    href='/services/eco-friendly-cabinets'
-                    className='block px-4 py-3 '
-                    onClick={closeMobileNav}
-                  >
-                    Event Equipment
-                  </Link>
-                  <Link
-                    href='/services/eco-friendly-cabinets'
-                    className='block px-4 py-3 '
-                    onClick={closeMobileNav}
-                  >
-                    Fresh Flowers
-                  </Link>
-                  <Link
-                    href='/services/eco-friendly-cabinets'
-                    className='block px-4 py-3 '
-                    onClick={closeMobileNav}
-                  >
-                    Cakes
-                  </Link>
-                </div>
-              </div>
-            </div>
+            <Link
+              href='/about-us'
+              className='text-base font-medium border-b w-full text-start py-2'
+              onClick={closeMobileNav}
+            >
+              Our Products
+            </Link>
 
             <div className='w-full mobile-menu'>
               {/* Planning Accordion */}
               <button
                 onClick={() => toggleAccordion(3)}
-                className='text-base font-medium w-full text-left py-3 border-b flex justify-between items-center'
+                className='text-base font-medium w-full text-left py-3 border-b flex justify-between items-center my-2'
               >
                 Planning
                 <Image
@@ -390,42 +210,42 @@ export default function Navbar() {
               >
                 <div className='flex flex-col bg-primaryExtraLight text-base rounded-lg'>
                   <Link
-                    href='/services/custom-cabinet-design'
+                    href='/planning/weddings'
                     className='block px-4 py-3 '
                     onClick={closeMobileNav}
                   >
                     Weddings
                   </Link>
                   <Link
-                    href='/services/cabinet-refinishing'
+                    href='/planning/corporate-events'
                     className='block px-4 py-3 '
                     onClick={closeMobileNav}
                   >
                     Corporate Events
                   </Link>
                   <Link
-                    href='/services/installation-services'
+                    href='/planning/birthdays'
                     className='block px-4 py-3 '
                     onClick={closeMobileNav}
                   >
                     Birthdays
                   </Link>
                   <Link
-                    href='/services/countertop-integration'
+                    href='/planning/video-&-photography'
                     className='block px-4 py-3 '
                     onClick={closeMobileNav}
                   >
                     Video & Photography
                   </Link>
                   <Link
-                    href='/services/storage-optimization-solutions'
+                    href='/planning/decor'
                     className='block px-4 py-3 '
                     onClick={closeMobileNav}
                   >
                     Decor
                   </Link>
                   <Link
-                    href='/services/eco-friendly-cabinets'
+                    href='/planning/others'
                     className='block px-4 py-3 '
                     onClick={closeMobileNav}
                   >

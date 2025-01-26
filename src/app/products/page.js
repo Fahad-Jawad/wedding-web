@@ -3,39 +3,62 @@ import React, { useState, useEffect } from 'react';
 import Breadcrumb from '../components/Breadcrumb';
 import ProductCard from '../components/ProductCard';
 import CategoryCard from '../components/CategoryCard';
-import { productData } from '../constants/productsData'; // Assume it has the list of products
+import {
+  productData,
+  subcategories,
+  categories,
+} from '../constants/productsData'; // Assume it has the list of products
 import Loader from '../components/Loader';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import Accordion from '../components/Accordion';
+import SubCategoryCard from '../components/SubCategoryCard';
 
-  // Categories data
-  const categoriesData = [
-    { name: 'Chair', image: '/images/products/chair/chair1.png' },
-    { name: 'Cake', image: '/images/products/cake/cake1.png' },
-    { name: 'Lamp', image: '/images/products/lamp/lamp1.png' },
-    { name: 'Table', image: '/images/products/table/table1.png' },
-    { name: 'Flower', image: '/images/products/flower/flower1.png' },
-    { name: 'Chair', image: '/images/products/chair/chair1.png' },
-    { name: 'Cake', image: '/images/products/cake/cake1.png' },
-    { name: 'Lamp', image: '/images/products/lamp/lamp1.png' },
-    { name: 'Table', image: '/images/products/table/table1.png' },
-    { name: 'Flower', image: '/images/products/flower/flower1.png' },
-  ];
+// Categories data
+const categoriesData = [
+  { name: 'Chair', image: '/images/products/chair/chair1.png' },
+  { name: 'Cake', image: '/images/products/cake/cake1.png' },
+  { name: 'Lamp', image: '/images/products/lamp/lamp1.png' },
+  { name: 'Table', image: '/images/products/table/table1.png' },
+  { name: 'Flower', image: '/images/products/flower/flower1.png' },
+  { name: 'Chair', image: '/images/products/chair/chair1.png' },
+  { name: 'Cake', image: '/images/products/cake/cake1.png' },
+  { name: 'Lamp', image: '/images/products/lamp/lamp1.png' },
+  { name: 'Table', image: '/images/products/table/table1.png' },
+  { name: 'Flower', image: '/images/products/flower/flower1.png' },
+];
 
+const categoriesLinks = [
+  'All Products',
+  'Tents',
+  'Tables',
+  'Chair',
+  'Table Settings',
+  'Decor',
+  'Catering Services',
+  'Furniture',
+  'Linens',
+  'Event Equipments',
+  'Fresh Flowers',
+  'Cakes',
+];
 
 export default function Page() {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [visibleProducts, setVisibleProducts] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState(productData); // For search and category filtering
+  const [filteredProducts, setFilteredProducts] = useState([]); // For search and category filtering
   const [searchValue, setSearchValue] = useState('');
-  const productsPerPage = 10;
+  const [selectedCategory, setSelectedCategory] = useState('Chair');
+  const [selectedSubCategories, setSelectedSubCategories] = useState([]);
+  const productsPerPage = 9;
 
   // Calculate total pages
   const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
@@ -53,6 +76,12 @@ export default function Page() {
 
     return () => clearTimeout(timer);
   }, [currentPage, filteredProducts]);
+
+  useEffect(() => {
+    const subCategories = subcategories[selectedCategory];
+    setFilteredProducts([]);
+    setSelectedSubCategories(subCategories || []);
+  }, [selectedCategory]);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -78,19 +107,24 @@ export default function Page() {
     }
   };
 
+  const handleSubCategoryClick = (subCategory) => {
+    const filtered = productData.filter(
+      (product) => product.subcategory === subCategory
+    );
+    setFilteredProducts(filtered);
+    setSelectedSubCategories(null);
+    setCurrentPage(1);
+  };
+
   const handleCategoryClick = (category) => {
     if (category === 'All Products') {
       setFilteredProducts(productData);
     } else {
-      const filtered = productData.filter(
-        (product) => product.category === category
-      );
-      setFilteredProducts(filtered);
+      console.log(category);
+      setSelectedCategory(category);
     }
-    setCurrentPage(1);
   };
 
-  
   return (
     <div>
       <Breadcrumb name='Our Products' />
@@ -123,80 +157,156 @@ export default function Page() {
             }}
             className='!h-[170px] z-10'
           >
-         {categoriesData.map((category, index) => (
-        <SwiperSlide key={index}>
-          <CategoryCard name={category.name} image={category.image} />
-        </SwiperSlide>
-      ))}
+            {categoriesData.map((category, index) => (
+              <SwiperSlide key={index}>
+                <CategoryCard name={category.name} image={category.image} onClick={handleCategoryClick} />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
 
-        <div className='flex justify-end my-3'>
-          <div className='flex justify-between w-full lg:w-1/3'>
-            <input
-              type='text'
-              id='search'
-              className='bg-white border border-gray-200 text-gray-900 text-base rounded-lg rounded-tr-none rounded-br-none focus:ring-blue-500 focus:border-blue-500 block w-full p-3'
-              placeholder='Search...'
-              value={searchValue}
-              onChange={handleSearchChange}
-              required
-            />
-            <button
-              className='p-2 bg-primary text-sm text-white font-semibold px-4 rounded-lg rounded-tl-none rounded-bl-none'
-              onClick={handleSearchClick}
-            >
-              Search
-            </button>
+        <div className='flex flex-col lg:flex-row'>
+          {/* Sidebar for larger screens */}
+          <div className='w-full lg:w-1/4 rounded-lg bg-primaryLight max-h-screen h-max p-4 py-8 mt-5 hidden lg:block'>
+            <div className='flex justify-between'>
+              <input
+                type='text'
+                id='search'
+                className='bg-white border border-gray-200 text-gray-900 text-base rounded-lg rounded-tr-none rounded-br-none focus:ring-blue-500 focus:border-blue-500 block w-full p-3'
+                placeholder='Search...'
+                value={searchValue}
+                onChange={handleSearchChange}
+                required
+              />
+              <button
+                className='p-2 bg-primary text-sm text-white font-semibold px-4 rounded-lg rounded-tl-none rounded-bl-none'
+                onClick={handleSearchClick}
+              >
+                Search
+              </button>
+            </div>
+
+            <h2 className=' text-2xl font-bold my-4'>Categories</h2>
+            <div className='flex flex-col gap-4'>
+              <div className='flex flex-col gap-3'>
+                {categoriesLinks.map((category) => (
+                  <p
+                    key={category}
+                    className='text-sm cursor-pointer underline-animation-white w-max'
+                    onClick={() => handleCategoryClick(category)}
+                  >
+                    {category}
+                  </p>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
 
-        {/* Main Content */}
-        <div className='w-full flex flex-col'>
-          {loading ? (
-            <Loader />
-          ) : (
-            <div className='w-full flex flex-wrap'>
-              {visibleProducts.map((product, index) => (
-                <div key={index} className='w-full md:w-1/3 xl:w-1/5 p-4'>
-                  <ProductCard name={product.name} image={product.image} />
+          {/* Sidebar for mobile screens */}
+          <div className='w-full block lg:hidden'>
+            <Accordion
+              title={'Categories'}
+              className='bg-primaryLight rounded-lg p-4'
+            >
+              <div className='w-full rounded-lg max-h-screen h-max py-2'>
+                <div className='flex justify-between'>
+                  <input
+                    type='text'
+                    id='search'
+                    className='bg-white border border-gray-200 text-gray-900 text-base rounded-lg rounded-tr-none rounded-br-none focus:ring-blue-500 focus:border-blue-500 block w-full p-3'
+                    placeholder='Search...'
+                    value={searchValue}
+                    onChange={handleSearchChange}
+                    required
+                  />
+                  <button
+                    className='p-2 bg-primary text-sm text-white font-semibold px-4 rounded-lg rounded-tl-none rounded-bl-none'
+                    onClick={handleSearchClick}
+                  >
+                    Search
+                  </button>
                 </div>
-              ))}
-            </div>
-          )}
 
-          {/* Pagination */}
-          {!loading && (
-            <div className='flex justify-center items-center mt-8 space-x-4'>
-              <button
-                className={`px-4 py-2 rounded-lg ${
-                  currentPage === 1
-                    ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                    : 'bg-primary text-white'
-                }`}
-                onClick={() => handlePageChange(currentPage - 1)}
-                disabled={currentPage === 1}
-              >
-                Previous
-              </button>
+                <h2 className='text-primary bg-white rounded-lg p-2 w-max text-base font-bold my-4'>
+                  Available Categories
+                </h2>
 
-              <span className='text-gray-700 font-medium'>
-                Page {currentPage} of {totalPages}
-              </span>
+                <div className='flex flex-col gap-4'>
+                  {categoriesLinks.map((category) => (
+                    <p
+                      key={category}
+                      className='text-base cursor-pointer underline-animation-white w-max'
+                      onClick={() => handleCategoryClick(category)}
+                    >
+                      {category}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </Accordion>
+          </div>
+          {/* Main Content */}
+          <div className='w-full lg:w-3/4  flex flex-col'>
+            {loading ? (
+              <Loader />
+            ) : (
+              <div className='w-full flex flex-wrap'>
+                {visibleProducts.map((product, index) => (
+                  <div key={index} className='w-full md:w-1/3 xl:w-1/3 p-4'>
+                    <ProductCard product={product} />
+                  </div>
+                ))}
+                {selectedSubCategories?.map((subCategory, index) => (
+                  <div key={index} className='w-full md:w-1/3 xl:w-1/3 p-4'>
+                    <SubCategoryCard
+                      name={subCategory.name}
+                      category={selectedCategory}
+                      onClick={handleSubCategoryClick}
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
 
-              <button
-                className={`px-4 py-2 rounded-lg ${
-                  currentPage === totalPages
-                    ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                    : 'bg-primary text-white'
-                }`}
-                onClick={() => handlePageChange(currentPage + 1)}
-                disabled={currentPage === totalPages}
-              >
-                Next
-              </button>
-            </div>
-          )}
+            {/* Pagination */}
+            {!loading && visibleProducts.length > 0 && (
+              <div className='flex justify-center items-center mt-8 space-x-4'>
+                <button
+                  className={`px-4 py-2 rounded-lg ${
+                    currentPage === 1
+                      ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                      : 'bg-primary text-white'
+                  }`}
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                >
+                  Previous
+                </button>
+
+                <span className='text-gray-700 font-medium'>
+                  Page {currentPage} of {totalPages}
+                </span>
+
+                <button
+                  className={`px-4 py-2 rounded-lg ${
+                    currentPage === totalPages
+                      ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                      : 'bg-primary text-white'
+                  }`}
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                >
+                  Next
+                </button>
+              </div>
+            )}
+
+            {!loading && visibleProducts.length=== 0 && selectedSubCategories?.length=== 0 && (
+              <p className='text-3xl text-gray-400 text-center mt-10'>
+                No Products Available
+              </p>
+            )}
+          </div>
         </div>
       </div>
     </div>

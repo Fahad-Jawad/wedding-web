@@ -12,7 +12,8 @@ export default {
         foreground: "var(--foreground)",
         primary:'#e1bad0',
         secondary:'#15803d',
-        primaryLight:'#fce2f1'
+        primaryLight:'#fce2f1',
+        primaryExtraLight:'#fef6fa',
       },
       fontSize:{
         'xxs':"8px"
