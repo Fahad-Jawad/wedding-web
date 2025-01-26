@@ -48,6 +48,69 @@ export default function Header() {
             <div className='hidden xl:w-1/3'></div>
           </div>
         </SwiperSlide>
+        <SwiperSlide>
+          <div className='w-full h-full  flex items-center slide2Bg'>
+            <div className='w-full xl:w-2/3 h-full flex py-32 xl:py-0 xl:items-center justify-center px-4 '>
+              <div className='flex flex-col gap-3 md:gap-4 lg:gap-6 z-20  md:w-11/12 lg:w-4/5'>
+                <div className='flex flex-col gap-2 md:gap-4 lg:gap-6 '>
+                  <h3 className='text-3xl md:text-4xl lg:text-7xl font-extrabold text-white leading-snug uppercase '>
+                    Plan the perfect <br /> wedding
+                  </h3>
+                  <p className='text-white text-xs lg:text-lg w-4/5 md:w-2/3'>
+                    Wedding should be designed around whats truly
+                    important.family, food and life
+                  </p>
+                </div>
+                <button className='bg-white rounded-full p-2 lg:p-3 px-4 lg:px-6 w-max text-xxs lg:text-sm font-semibold uppercase'>
+                  Contact Now
+                </button>
+              </div>
+            </div>
+            <div className='hidden xl:w-1/3'></div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='w-full h-full  flex items-center slide1Bg'>
+            <div className='w-full xl:w-2/3 h-full flex py-32 xl:py-0 xl:items-center justify-center px-4 '>
+              <div className='flex flex-col gap-3 md:gap-4 lg:gap-6 z-20  md:w-11/12 lg:w-4/5'>
+                <div className='flex flex-col gap-2 md:gap-4 lg:gap-6 '>
+                  <h3 className='text-3xl md:text-4xl lg:text-7xl font-extrabold text-white leading-snug uppercase '>
+                    Plan the perfect <br /> wedding
+                  </h3>
+                  <p className='text-white text-xs lg:text-lg w-4/5 md:w-2/3'>
+                    Wedding should be designed around whats truly
+                    important.family, food and life
+                  </p>
+                </div>
+                <button className='bg-white rounded-full p-2 lg:p-3 px-4 lg:px-6 w-max text-xxs lg:text-sm font-semibold uppercase'>
+                  Contact Now
+                </button>
+              </div>
+            </div>
+            <div className='hidden xl:w-1/3'></div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='w-full h-full  flex items-center slide2Bg'>
+            <div className='w-full xl:w-2/3 h-full flex py-32 xl:py-0 xl:items-center justify-center px-4 '>
+              <div className='flex flex-col gap-3 md:gap-4 lg:gap-6 z-20  md:w-11/12 lg:w-4/5'>
+                <div className='flex flex-col gap-2 md:gap-4 lg:gap-6 '>
+                  <h3 className='text-3xl md:text-4xl lg:text-7xl font-extrabold text-white leading-snug uppercase '>
+                    Plan the perfect <br /> wedding
+                  </h3>
+                  <p className='text-white text-xs lg:text-lg w-4/5 md:w-2/3'>
+                    Wedding should be designed around whats truly
+                    important.family, food and life
+                  </p>
+                </div>
+                <button className='bg-white rounded-full p-2 lg:p-3 px-4 lg:px-6 w-max text-xxs lg:text-sm font-semibold uppercase'>
+                  Contact Now
+                </button>
+              </div>
+            </div>
+            <div className='hidden xl:w-1/3'></div>
+          </div>
+        </SwiperSlide>
 
         <div className='swiper-button-next !hidden md:!block'></div>
         <div className='swiper-button-prev !hidden md:!block'></div>

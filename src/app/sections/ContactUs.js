@@ -89,7 +89,7 @@ export default function ContactUs() {
   };
 
   return (
-    <div className='flex my-20 px-4 md:px-8 lg:px-12 2xl:px-20 gap-10 flex-col lg:flex-row'>
+    <div className='flex my-20 px-4 md:px-8 lg:px-12 2xl:px-20 gap-10 flex-col lg:flex-row' id='contact'>
       <div className='w-full lg:w-1/2 serviceSide'>
         <Image
 

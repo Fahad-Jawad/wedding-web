@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
 import Button from '../components/Button';
-import VideoButton from '../components/VideoButton';
 
 export default function AboutUs() {
   return (
