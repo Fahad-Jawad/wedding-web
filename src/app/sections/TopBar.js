@@ -11,7 +11,7 @@ export default function TopBar() {
             width={20}
             height={20}
           />
-          <p className='text-xs md:text-sm'> info@wedding.com</p>
+          <p className='text-xs md:text-sm'> info@crystaldecore.com</p>
         </div>
         <div className='flex gap-1 items-center'>
           <Image

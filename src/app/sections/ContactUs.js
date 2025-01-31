@@ -103,7 +103,7 @@ export default function ContactUs() {
       </div>
       <div className='w-full lg:w-1/2 flex flex-col gap-4 py-10 relative'>
         <div className='flex flex-col gap-4 z-20'>
-          <h2 className='text-sm md:text-base lg:text-lg  text-secondary fancy-text '>
+          <h2 className='text-sm md:text-base lg:text-lg  text-primary fancy-text '>
             Get Free Quote
           </h2>
           <h3 className='text-3xl md:text-4xl lg:text-5xl font-bold '>
@@ -186,7 +186,7 @@ export default function ContactUs() {
             type='submit'
             disabled={isSubmitting}
             className={`w-max p-3 px-4 md:px-6 lg:px-8 text-sm md:text-base lg:text-lg text-white font-bold rounded-lg ${
-              isSubmitting ? 'bg-gray-400' : 'bg-primary'
+              isSubmitting ? 'bg-gray-400' : 'bg-black'
             }`}
           >
             {isSubmitting ? 'Submitting...' : 'Submit'}

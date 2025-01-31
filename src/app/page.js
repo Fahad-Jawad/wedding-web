@@ -7,6 +7,7 @@ import AttachedPromo from "./sections/AttachedPromo";
 import Gallery from "./sections/Gallery";
 import Testimonials from "./sections/Testimonials";
 import ContactUs from "./sections/ContactUs";
+import WorkingAreas from "./sections/WorkingAreas";
 
 export default function Home() {
   return (
@@ -15,9 +16,10 @@ export default function Home() {
     <Header />
     <AboutUs />
     <Services />
-    <StatsSection />
     <AttachedPromo />
     <Gallery />
+    <StatsSection />
+    <WorkingAreas />
     <Testimonials />
     <ContactUs />
     </>

@@ -8,11 +8,11 @@ export default function Footer() {
       <div className='w-full lg:w-1/4 flex flex-col gap-5 items-center lg:items-start'>
         <div className='flex justify-center w-3/4'>
           <Image
-            src={'/images/wedding-logo.png'}
-            alt='wedding logo'
+            src={'/images/logoWhite.jpg'}
+            alt='Crystal Decor Logo'
             width={160}
             height={150}
-            className='rounded-xl w-full h-auto'
+            className='rounded-xl bg-white w-full h-auto'
           />
         </div>
         <div className='w-5/6'>
@@ -106,7 +106,7 @@ export default function Footer() {
             </div>
             <div className='flex flex-col gap-1'>
               <h3 className='text-base font-bold '>Official Email</h3>
-              <p className='text-xs'>info@impressiveKitchen.com</p>
+              <p className='text-xs'>info@crystaldecore.com</p>
             </div>
           </div>
 

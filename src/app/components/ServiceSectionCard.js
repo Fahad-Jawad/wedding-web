@@ -9,7 +9,7 @@ const ServiceSectionCard = ({ name, index }) => {
     <div
       className={`p-4 md:p-6 lg:p-10 rounded-lg flex items-center relative flex-col-reverse lg:flex-row gap-10 lg:gap-0  ${
         isEven ? 'lg:flex-row-reverse' : ''
-      } bg-primaryLight`}
+      } bg-primaryExtraLight`}
     >
        <Image
           src={'/images/serviceBg.png'}

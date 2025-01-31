@@ -17,7 +17,7 @@ export default function Testimonials() {
     <div className='flex p-4 md:p-8 lg:p-12 2xl:p-10 testimonials relative flex-col-reverse lg:flex-row'>
       <div className='w-full lg:w-1/2 lg:p-5 xl:p-10 '>
         <div className='flex flex-col gap-3'>
-          <h2 className='text-sm md:text-base lg:text-lg text-bg-white fancy-text text-secondary'>
+          <h2 className='text-sm md:text-base lg:text-lg text-bg-white fancy-text text-primary'>
             Voices of Trust
           </h2>
           <h3 className='text-3xl md:text-4xl lg:text-5xl font-bold'>

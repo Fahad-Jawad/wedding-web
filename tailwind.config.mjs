@@ -10,10 +10,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary:'#e1bad0',
-        secondary:'#15803d',
-        primaryLight:'#fce2f1',
-        primaryExtraLight:'#fef6fa',
+        primary:'#666666',
+        secondary:'#000000',
+        primaryLight:'#b2b2b2',
+        primaryExtraLight:'#efefef',
       },
       fontSize:{
         'xxs':"8px"

@@ -36,10 +36,10 @@ export default function Navbar() {
           <div className='text-base font-bold'>
             <Link href='/'>
               <Image
-                src={'/images/wedding-logo.png'}
-                width={100}
-                height={80}
-                alt='wedding logo'
+                src={'/images/logo.svg'}
+                width={200}
+                height={200}
+                alt='Crystal Decor Logo'
               />
             </Link>
           </div>

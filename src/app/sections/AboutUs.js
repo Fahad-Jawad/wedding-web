@@ -20,7 +20,7 @@ export default function AboutUs() {
         className='w-1/6 absolute bottom-0 right-0 opacity-25 floating'
       />
       <div class='w-full lg:w-1/2 flex flex-col gap-4'>
-        <h2 className='fancy-text text-lg text-secondary'>Hi , Meet Dreams</h2>
+        <h2 className='fancy-text text-lg text-primary'>Hi , Meet Dreams</h2>
         <h3 className='text-3xl md:text-4xl lg:text-5xl font-bold'>
           Your Advanced and Number One Wedding Planner
         </h3>

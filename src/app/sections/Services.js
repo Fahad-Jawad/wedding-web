@@ -4,9 +4,9 @@ import SectionDivider from '../components/SectionDivider';
 
 export default function Services() {
   return (
-    <div className='flex flex-col p-4 md:p-8 lg:p-12 2xl:p-20 relative bg-pink-50'>
+    <div className='flex flex-col p-4 md:p-8 lg:p-12 2xl:p-20 relative bg-primaryExtraLight'>
       <div className='flex justify-center gap-3 flex-col w-full text-center'>
-        <h2 className='fancy-text text-lg text-secondary'>Our Services</h2>
+        <h2 className='fancy-text text-lg text-primary'>Our Services</h2>
         <SectionDivider className='mx-auto' />
         <h3 className='text-4xl font-bold'>Complete Wedding Planning</h3>
       </div>
