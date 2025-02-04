@@ -13,6 +13,16 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import TestimonialCard from '../components/TestimonialCard';
 export default function Testimonials() {
+  const testimonials = [
+    {
+      name: 'Aisha & Ryan',
+      desc: 'Crystal Decor made our wedding absolutely magical! The floral designs and decorations were breathtaking, and the coordination was flawless. Everything was beyond perfect!',
+    },
+    {
+      name: 'Emily & Daniel',
+      desc: 'From the elegant décor to the delicious catering and a show-stopping wedding cake, Crystal Decor made our dream wedding come true. Highly recommended!',
+    },
+  ];
   return (
     <div className='flex p-4 md:p-8 lg:p-12 2xl:p-10 testimonials relative flex-col-reverse lg:flex-row'>
       <div className='w-full lg:w-1/2 lg:p-5 xl:p-10 '>
@@ -35,22 +45,19 @@ export default function Testimonials() {
             loop={true}
             className='!h-auto mt-5 w-full lg:w-11/12 '
           >
-            <SwiperSlide>
-              <TestimonialCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <TestimonialCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <TestimonialCard />
-            </SwiperSlide>
+            {testimonials.map((testimonial, index) => (
+              <SwiperSlide key={index}>
+                <TestimonialCard
+                  name={testimonial.name}
+                  desc={testimonial.desc}
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>
       <div className='w-full lg:w-1/2 my-5 lg:my-0'>
         <Image
-
-          
           src={'/images/testside.png'}
           alt='testimonial side img'
           width={1000}

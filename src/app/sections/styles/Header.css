@@ -1,13 +1,29 @@
 .slide1Bg {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
-      url('/images/wedding-slide1.png');
+      url('/images/Enchanting.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
   .slide2Bg {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
-      url('/images/testside.png');
+      url('/images/Floral.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+ 
+  .slide3Bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
+      url('/images/Coordination.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+ 
+  .slide4Bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
+      url('/images/Celebration.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

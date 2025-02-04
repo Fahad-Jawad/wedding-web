@@ -33,11 +33,11 @@ export default function Header() {
               <div className='flex flex-col gap-3 md:gap-4 lg:gap-6 z-20  md:w-11/12 lg:w-4/5'>
                 <div className='flex flex-col gap-2 md:gap-4 lg:gap-6 '>
                   <h3 className='text-3xl md:text-4xl lg:text-7xl font-extrabold text-white leading-snug uppercase '>
-                    Plan the perfect <br /> wedding
+                    Enchanting Wedding Decor
                   </h3>
                   <p className='text-white text-xs lg:text-lg w-4/5 md:w-2/3'>
-                    Wedding should be designed around whats truly
-                    important.family, food and life
+                    Transform your wedding venue into a breathtaking masterpiece
+                    with our expert decoration services.
                   </p>
                 </div>
                 <button className='bg-white rounded-full p-2 lg:p-3 px-4 lg:px-6 w-max text-xxs lg:text-sm font-semibold uppercase'>
@@ -54,15 +54,15 @@ export default function Header() {
               <div className='flex flex-col gap-3 md:gap-4 lg:gap-6 z-20  md:w-11/12 lg:w-4/5'>
                 <div className='flex flex-col gap-2 md:gap-4 lg:gap-6 '>
                   <h3 className='text-3xl md:text-4xl lg:text-7xl font-extrabold text-white leading-snug uppercase '>
-                    Plan the perfect <br /> wedding
+                    Floral Elegance for Your Big Day
                   </h3>
                   <p className='text-white text-xs lg:text-lg w-4/5 md:w-2/3'>
-                    Wedding should be designed around whats truly
-                    important.family, food and life
+                    Stunning flower arrangements that add charm, romance, and
+                    sophistication to your wedding.
                   </p>
                 </div>
                 <button className='bg-white rounded-full p-2 lg:p-3 px-4 lg:px-6 w-max text-xxs lg:text-sm font-semibold uppercase'>
-                  Contact Now
+                  Call Now
                 </button>
               </div>
             </div>
@@ -70,20 +70,20 @@ export default function Header() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='w-full h-full  flex items-center slide1Bg'>
+          <div className='w-full h-full  flex items-center slide3Bg'>
             <div className='w-full xl:w-2/3 h-full flex py-32 xl:py-0 xl:items-center justify-center px-4 '>
               <div className='flex flex-col gap-3 md:gap-4 lg:gap-6 z-20  md:w-11/12 lg:w-4/5'>
                 <div className='flex flex-col gap-2 md:gap-4 lg:gap-6 '>
                   <h3 className='text-3xl md:text-4xl lg:text-7xl font-extrabold text-white leading-snug uppercase '>
-                    Plan the perfect <br /> wedding
+                    Seamless <br/> Coordination
                   </h3>
                   <p className='text-white text-xs lg:text-lg w-4/5 md:w-2/3'>
-                    Wedding should be designed around whats truly
-                    important.family, food and life
+                    From planning to execution, we handle every detail so you
+                    can enjoy your special day stress-free.
                   </p>
                 </div>
                 <button className='bg-white rounded-full p-2 lg:p-3 px-4 lg:px-6 w-max text-xxs lg:text-sm font-semibold uppercase'>
-                  Contact Now
+                  Get Free Quote
                 </button>
               </div>
             </div>
@@ -91,20 +91,20 @@ export default function Header() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='w-full h-full  flex items-center slide2Bg'>
+          <div className='w-full h-full  flex items-center slide4Bg'>
             <div className='w-full xl:w-2/3 h-full flex py-32 xl:py-0 xl:items-center justify-center px-4 '>
               <div className='flex flex-col gap-3 md:gap-4 lg:gap-6 z-20  md:w-11/12 lg:w-4/5'>
                 <div className='flex flex-col gap-2 md:gap-4 lg:gap-6 '>
                   <h3 className='text-3xl md:text-4xl lg:text-7xl font-extrabold text-white leading-snug uppercase '>
-                    Plan the perfect <br /> wedding
+                    A Celebration to Remember
                   </h3>
                   <p className='text-white text-xs lg:text-lg w-4/5 md:w-2/3'>
-                    Wedding should be designed around whats truly
-                    important.family, food and life
+                    Exquisite décor, delicious catering, and a dreamy wedding
+                    cake—all tailored to perfection.
                   </p>
                 </div>
                 <button className='bg-white rounded-full p-2 lg:p-3 px-4 lg:px-6 w-max text-xxs lg:text-sm font-semibold uppercase'>
-                  Contact Now
+                  Call 403-361-4968
                 </button>
               </div>
             </div>

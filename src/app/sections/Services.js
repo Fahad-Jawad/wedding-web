@@ -12,105 +12,100 @@ export default function Services() {
       </div>
 
       <div class='py-10 flex flex-wrap'>
-        <div class='w-full md:w-1/2 lg:w-1/3'>
-          <div className=' p-3 py-6 my-4  lg:m-3 bg-white rounded-lg flex flex-col items-center gap-4 text-center'>
+        <div class='w-full md:w-1/2 lg:w-1/3 p-2'>
+          <div className=' p-3 py-6 my-4  lg:m-3 h-full bg-white rounded-lg flex flex-col items-center gap-4 text-center group hover:border-secondary border-2 border-white duration-300'>
             <Image
-              src={'/images/sideshapeleft.png'}
+              src={'/images/services/service1.png'}
               alt='service 1'
               width={200}
               height={200}
-              className='w-[200px] h-[200px]'
+              className='w-[200px] h-[200px] group-hover:scale-105 duration-300'
             />
-            <h2 className='text-3xl font-bold'>Flower Design</h2>
+            <h2 className='text-3xl font-bold group-hover:scale-105 duration-300'>Flower Design</h2>
             <p className='text-base text-gray-300'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
-              omnis hic. Praesentium, autem! Quaerat, similique totam. Suscipit
-              qui{' '}
+              Exquisite floral arrangements, from bridal bouquets to venue
+              décor, crafted to complement your theme beautifully.
             </p>
           </div>
         </div>
-        <div class='w-full md:w-1/2 lg:w-1/3'>
-          <div className=' p-3 py-6 my-4  lg:m-3 bg-white rounded-lg flex flex-col items-center gap-4 text-center'>
+        <div class='w-full md:w-1/2 lg:w-1/3 p-2'>
+          <div className=' p-3 py-6 my-4  lg:m-3 h-full bg-white rounded-lg flex flex-col items-center gap-4 text-center group hover:border-secondary border-2 border-white duration-300'>
             <Image
-              src={'/images/sideshapeleft.png'}
+              src={'/images/services/service2.png'}
               alt='service 1'
               width={200}
               height={200}
-              className='w-[200px] h-[200px]'
+              className='w-[200px] h-[200px] group-hover:scale-105 duration-300'
             />
-            <h2 className='text-3xl font-bold'>Flower Design</h2>
+            <h2 className='text-3xl font-bold group-hover:scale-105 duration-300'>Photoshoot</h2>
             <p className='text-base text-gray-300'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
-              omnis hic. Praesentium, autem! Quaerat, similique totam. Suscipit
-              qui{' '}
+              Capture timeless moments with our professionally styled wedding
+              photoshoot setups.
             </p>
           </div>
         </div>
-        <div class='w-full md:w-1/2 lg:w-1/3'>
-          <div className=' p-3 py-6 my-4  lg:m-3 bg-white rounded-lg flex flex-col items-center gap-4 text-center'>
+        <div class='w-full md:w-1/2 lg:w-1/3 p-2'>
+          <div className=' p-3 py-6 my-4  lg:m-3 h-full bg-white rounded-lg flex flex-col items-center gap-4 text-center group hover:border-secondary border-2 border-white duration-300'>
             <Image
-              src={'/images/sideshapeleft.png'}
+              src={'/images/services/service3.png'}
               alt='service 1'
               width={200}
               height={200}
-              className='w-[200px] h-[200px]'
+              className='w-[200px] h-[200px] group-hover:scale-105 duration-300'
             />
-            <h2 className='text-3xl font-bold'>Flower Design</h2>
+            <h2 className='text-3xl font-bold group-hover:scale-105 duration-300'>Wedding Coordination</h2>
             <p className='text-base text-gray-300'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
-              omnis hic. Praesentium, autem! Quaerat, similique totam. Suscipit
-              qui{' '}
+              We handle all the details—venue setup, guest management, and
+              seamless event flow—so you can relax and enjoy your day.
             </p>
           </div>
         </div>
-        <div class='w-full md:w-1/2 lg:w-1/3'>
-          <div className=' p-3 py-6 my-4  lg:m-3 bg-white rounded-lg flex flex-col items-center gap-4 text-center'>
+        <div class='w-full md:w-1/2 lg:w-1/3 p-2'>
+          <div className=' p-3 py-6 my-4  lg:m-3 h-full bg-white rounded-lg flex flex-col items-center gap-4 text-center group hover:border-secondary border-2 border-white duration-300'>
             <Image
-              src={'/images/sideshapeleft.png'}
+              src={'/images/services/service4.png'}
               alt='service 1'
               width={200}
               height={200}
-              className='w-[200px] h-[200px]'
+              className='w-[200px] h-[200px] group-hover:scale-105 duration-300'
             />
-            <h2 className='text-3xl font-bold'>Flower Design</h2>
+            <h2 className='text-3xl font-bold group-hover:scale-105 duration-300'>Wedding Cake</h2>
             <p className='text-base text-gray-300'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
-              omnis hic. Praesentium, autem! Quaerat, similique totam. Suscipit
-              qui{' '}
+              Custom-designed wedding cakes that taste as incredible as they
+              look, perfectly matching your theme and style.
             </p>
           </div>
         </div>
-        <div class='w-full md:w-1/2 lg:w-1/3'>
-          <div className=' p-3 py-6 my-4  lg:m-3 bg-white rounded-lg flex flex-col items-center gap-4 text-center'>
+        <div class='w-full md:w-1/2 lg:w-1/3 p-2'>
+          <div className=' p-3 py-6 my-4  lg:m-3 h-full bg-white rounded-lg flex flex-col items-center gap-4 text-center group hover:border-secondary border-2 border-white duration-300'>
             <Image
-              src={'/images/sideshapeleft.png'}
+              src={'/images/services/service5.png'}
               alt='service 1'
               width={200}
               height={200}
-              className='w-[200px] h-[200px]'
+              className='w-[200px] h-[200px] group-hover:scale-105 duration-300'
             />
-            <h2 className='text-3xl font-bold'>Flower Design</h2>
+            <h2 className='text-3xl font-bold group-hover:scale-105 duration-300'>Catering</h2>
             <p className='text-base text-gray-300'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
-              omnis hic. Praesentium, autem! Quaerat, similique totam. Suscipit
-              qui{' '}
+              Delicious, customized menus that delight your guests, from
+              appetizers to full-course meals.
             </p>
           </div>
         </div>
-        <div class='w-full md:w-1/2 lg:w-1/3'>
-          <div className=' p-3 py-6 my-4  lg:m-3 bg-white rounded-lg flex flex-col items-center gap-4 text-center'>
+        <div class='w-full md:w-1/2 lg:w-1/3 p-2'>
+          <div className=' p-3 py-6 my-4  lg:m-3 h-full bg-white rounded-lg flex flex-col items-center gap-4 text-center group hover:border-secondary border-2 border-white duration-300'>
             <Image
-              src={'/images/sideshapeleft.png'}
+              src={'/images/services/service6.png'}
               alt='service 1'
               width={200}
               height={200}
-              className='w-[200px] h-[200px]'
+              className='w-[200px] h-[200px] group-hover:scale-105 duration-300'
             />
-            <h2 className='text-3xl font-bold'>Flower Design</h2>
+            <h2 className='text-3xl font-bold group-hover:scale-105 duration-300'>Decor</h2>
             <p className='text-base text-gray-300'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
-              omnis hic. Praesentium, autem! Quaerat, similique totam. Suscipit
-              qui{' '}
+              Stunning venue decorations, including elegant table settings,
+              luxurious drapery, and ambient lighting, to create the perfect
+              atmosphere.
             </p>
           </div>
         </div>
