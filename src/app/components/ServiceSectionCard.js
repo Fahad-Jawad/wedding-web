@@ -24,12 +24,12 @@ const ServiceSectionCard = ({ name, index }) => {
           alt={`${name} service`}
           width={450}
           height={450}
-          className='w-full md:w-3/4 aspect-auto '
+          className='w-full md:w-3/4 aspect-auto  rounded-lg'
         />
       </div>
       <div className='w-full lg:w-1/2 h-full z-20'>
-        <div className='bg-white rounded-lg p-6 flex flex-col gap-3 h-full'>
-          <h2 className='text-secondary text-4xl font-bold capitalize'>{name}</h2>
+        <div className='bg-white rounded-lg p-6 flex flex-col gap-5 h-full'>
+          <h2 className='text-secondary text-6xl font-bold capitalize fancy-text text-center'>{name}</h2>
           <p className='text-sm text-gray-400'>{service.desc}</p>
           <div className='flex flex-col gap-3 mt-3'>
             <h4 className='text-2xl font-bold'>Key Features</h4>

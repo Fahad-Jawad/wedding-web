@@ -16,9 +16,9 @@ export default function Home() {
     <Header />
     <AboutUs />
     <Services />
+    <StatsSection />
     <AttachedPromo />
     <Gallery />
-    <StatsSection />
     <WorkingAreas />
     <Testimonials />
     <ContactUs />

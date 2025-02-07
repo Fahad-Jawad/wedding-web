@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import TopBar from '../sections/TopBar';
@@ -9,7 +9,16 @@ import Button from './Button';
 export default function Navbar() {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [activeAccordion, setActiveAccordion] = useState(null);
+  const [isSticky, setIsSticky] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsSticky(window.scrollY > 50); // Change when scrolling past 50px
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   const toggleMobileNav = () => {
     setIsMobileNavOpen(!isMobileNavOpen);
   };
@@ -30,13 +39,17 @@ export default function Navbar() {
   return (
     <>
       <TopBar />
-      <nav className='bg-white text-primaryDark sticky top-0 z-50 shadow-md px-4 md:px-8 lg:px-12 2xl:px-20 py-1'>
+      <nav
+        className={`sticky top-0 z-50 shadow-md px-4 md:px-8 lg:px-12 2xl:px-20 py-1 transition-colors duration-300 ${
+          isSticky ? 'bg-black text-white' : 'bg-white text-primaryDark'
+        }`}
+      >
         <div className='container mx-auto lg:px-4 flex items-center justify-between h-16'>
           {/* Logo */}
           <div className='text-base font-bold'>
             <Link href='/'>
               <Image
-                src={'/images/logo.svg'}
+                src={isSticky?'/images/logoWhiteTr.png' :'/images/logo.svg'}
                 width={200}
                 height={200}
                 alt='Crystal Decor Logo'
@@ -123,13 +136,15 @@ export default function Navbar() {
               Contact Us
             </Link>
             <div className='hidden xl:flex'>
-            <Link href='/contact-us'>
-              <Button text={'Book Now'} className='px-4 py-3' />
-            </Link>
+              <Link href='/contact-us'>
+                <Button
+                  text={'Book Now'}
+                  className='px-4 py-3 '
+                  isSticky={isSticky}
+                />
+              </Link>
+            </div>
           </div>
-          </div>
-
-        
 
           {/* Mobile Toggle Button */}
           <div className='xl:hidden'>

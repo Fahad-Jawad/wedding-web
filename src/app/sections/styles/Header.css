@@ -1,5 +1,5 @@
 .slide1Bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
       url('/images/Enchanting.png');
     background-size: cover;
     background-position: center;

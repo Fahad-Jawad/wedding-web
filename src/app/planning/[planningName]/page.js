@@ -5,6 +5,8 @@ import Loader from '@/app/components/Loader';
 import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import { plannings } from '@/app/constants/planningData';
+import Button from '@/app/components/Button';
+import Link from 'next/link';
 
 export default function Page() {
   const pathname = usePathname(); // Get the current pathname
@@ -45,7 +47,7 @@ export default function Page() {
 
         {/* Right: Service Details */}
         <div className='flex-grow lg:pl-8 mt-6 lg:mt-0'>
-          <h2 className='text-bg-color text-sm md:text-base lg:text-lg font-bold'>
+          <h2 className='text-bg-color text-sm md:text-base lg:text-lg font-bold '>
             Plan Now
           </h2>
           <h1 className='text-4xl text-primary font-bold my-5 uppercase'>
@@ -54,6 +56,10 @@ export default function Page() {
           <p className='text-lg leading-relaxed text-gray-600'>
             {planningData?.desc}
           </p>
+
+          <Link href={'/contact-us'}>
+            <Button text={'Get Free Quote'} className='px-4 py-3 my-4' />
+          </Link>
         </div>
       </div>
     </div>
