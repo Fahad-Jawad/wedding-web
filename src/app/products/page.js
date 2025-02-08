@@ -23,12 +23,12 @@ import SubCategoryCard from '../components/SubCategoryCard';
 
 // Categories data
 const categoriesData = [
-  { name: 'Chair', image: '/images/products/chair/chair1.png' },
+  { name: 'chair', image: '/images/products/chair/chair1.png' },
   { name: 'Cake', image: '/images/products/cake/cake1.png' },
   { name: 'Lamp', image: '/images/products/lamp/lamp1.png' },
   { name: 'Table', image: '/images/products/table/table1.png' },
   { name: 'Flower', image: '/images/products/flower/flower1.png' },
-  { name: 'Chair', image: '/images/products/chair/chair1.png' },
+  { name: 'chair', image: '/images/products/chair/chair1.png' },
   { name: 'Cake', image: '/images/products/cake/cake1.png' },
   { name: 'Lamp', image: '/images/products/lamp/lamp1.png' },
   { name: 'Table', image: '/images/products/table/table1.png' },
@@ -39,7 +39,7 @@ const categoriesLinks = [
   'All Products',
   'Tents',
   'Tables',
-  'Chair',
+  'chair',
   'Table Settings',
   'Decor',
   'Catering Services',
@@ -56,7 +56,7 @@ export default function Page() {
   const [visibleProducts, setVisibleProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]); // For search and category filtering
   const [searchValue, setSearchValue] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('Chair');
+  const [selectedCategory, setSelectedCategory] = useState('chair');
   const [selectedSubCategories, setSelectedSubCategories] = useState([]);
   const productsPerPage = 9;
 

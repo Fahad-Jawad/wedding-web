@@ -191,7 +191,7 @@ export default function Navbar() {
               Our Services
             </Link>
             <Link
-              href='/about-us'
+              href='/products'
               className='text-base font-medium border-b w-full text-start py-2'
               onClick={closeMobileNav}
             >
