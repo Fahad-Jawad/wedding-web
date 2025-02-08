@@ -60,17 +60,17 @@ export default function Footer() {
         <Link href='/about-us' className='underline-animation-white w-max'>
           About Us
         </Link>
-        <Link href='/products' className='underline-animation-white w-max'>
+        <Link href='/services' className='underline-animation-white w-max'>
           Our Services
         </Link>
-        <Link href='/mission' className='underline-animation-white w-max'>
+        <Link href='/products' className='underline-animation-white w-max'>
           Our Products
         </Link>
-        <Link href='/contact-us' className='underline-animation-white w-max'>
+        <Link href='/planning/weddings' className='underline-animation-white w-max'>
           Planning
         </Link>
         
-        <Link href='/contact-us' className='underline-animation-white w-max'>
+        <Link href='/projects' className='underline-animation-white w-max'>
           Projects
         </Link>
         <Link href='/contact-us' className='underline-animation-white w-max'>
